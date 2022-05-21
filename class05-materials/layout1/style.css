@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid darkgray;
+}
+
+header, footer {
+  height: 100px;
+  clear: both;
+}
+
+#top {
+  height: 180px;
+}
+
+#bottom {
+  height: 230px;
+}
+
+#top > section {
+  width: 33.3%;
+  height: 100%;
+  float: left;
+}
+
+#bottom > section {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
