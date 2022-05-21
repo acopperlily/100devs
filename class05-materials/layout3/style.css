@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid darkgray;
+}
+
+header, footer {
+  height: 100px;
+  clear: both;
+}
+
+section > section {
+  height: 300px;
+  float: left;
+}
+
+.small {
+  width: 20%;
+}
+
+.large {
+  width: 40%;
+}
