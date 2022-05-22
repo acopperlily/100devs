@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid darkgray;
+}
+
+header, footer {
+  height: 100px;
+  clear: both;
+}
+
+section {
+  height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    background: #ff1eff;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  section {
+    background: #18b5ef;
+  }
+  .split {
+    height: 250px;
+    width: 50%;
+    float: left;
+    background: #ffff00;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  section, .split {
+    height: 320px;
+    width: 33.33%;
+    float: left;
+    background: orange;
+  }
+}
