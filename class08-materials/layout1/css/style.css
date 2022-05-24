@@ -1,5 +1,7 @@
 /* Box Model Hack */
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -21,22 +23,52 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+body > * {
+  float: left;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+nav {
+  width: 10%;
+  padding: 20px;
 }
 
-footer {
-
+main {
+  width: 50%;
+  padding: 20px;
 }
 
+aside {
+  width: 40%;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+nav > * {
+  padding-bottom: 10px;
+}
+
+nav ul {
+  padding-top: 40px;
+}
+
+li {
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main img {
+  width: 100%;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
