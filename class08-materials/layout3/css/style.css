@@ -1,5 +1,7 @@
 /* Box Model Hack */
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -30,11 +32,64 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-
+  height: 55px;
+  background-color: black;
+  color: white;
+  padding: 10px;
 }
 
-footer {
+header > * {
+  float: left;
+  padding: 10px;
+}
 
+nav {
+  width: 60%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: left;
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main > section {
+  float: left;
+  width: 50%;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+main > section + section > section {
+  float: left;
+  width: 50%;
+  padding: 10px 20px 10px 0;
+}
+
+main > section + section > section > * {
+  padding-bottom: 10px;
+}
+
+main + section {
+  padding: 10px;
+}
+
+main + section > section {
+  float: left;
+  width: 33%;
+  padding: 10px 0;
+}
+
+main + section > section > * {
+  padding-bottom: 10px;
 }
 
 /******************************************
