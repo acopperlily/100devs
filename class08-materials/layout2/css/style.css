@@ -1,5 +1,7 @@
 /* Box Model Hack */
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -30,11 +32,55 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-
+  padding: 20px 130px;
+  height: 50px;
 }
 
-footer {
+header > * {
+  float: left;
+}
 
+nav {
+  width: 30%;
+}
+
+#logo {
+  width: 30%;
+  padding: 0 50px;
+}
+
+#logo > * {
+  float: left;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: left;
+  width: 30%;
+}
+
+a {
+  text-decoration: none;
+}
+
+main > section {
+  float: left;
+}
+
+section {
+  margin-top: 100px;
+  width: 50%;
+}
+
+section > img {
+  width: 80%;
+}
+
+section > ul > li {
+  width: 25%;
 }
 
 /******************************************
