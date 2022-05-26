@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -25,6 +25,9 @@ header, main {
 header {
   padding: 20px;
   height: 70px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: bold;
 }
 
 a {
@@ -46,7 +49,7 @@ header > nav > ul > li {
 }
 
 img {
-  width: 10%;
+  width: 12%;
 }
 
 #donate-container {
@@ -56,7 +59,7 @@ img {
 #donate-btn {
   color: #66768a;
   background: #f1f1f1;
-  padding: 10px 20px;
+  padding: 6px 10px;
   border-radius: 5px;
 }
 
@@ -64,7 +67,7 @@ main {
   clear: both;
   height: 300px;
   text-align: center;
-  padding: 60px;
+  padding: 40px;
 }
 
 h1 {
@@ -76,41 +79,85 @@ h1 {
 main p {
   font-size: .8rem;
   padding: 0 12px;
-  line-height: 1.4rem;
+  line-height: 1.3rem;
   margin-bottom: 10px;
 }
 
+main a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  
+  display: block;
+  margin-bottom: 40px;
+}
+
+main span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .6rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #161f2a;
+}
+
 #why {
-  height: 300px;
+  height: 280px;
   text-align: center;
-  padding: 80px 140px;
+  padding: 80px 170px;
+}
+
+#why p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: bold;
+  line-height: 1.1rem;
 }
 
 .divblock {
   background: #66768a;
   width: 200px;
   height: 100px;
+  margin: 0 auto 20px auto;
 }
 
 #middle {
   background: #dbdfe2;
-  height: 500px;
-  padding: 80px;
+  height: 400px;
+  padding: 50px;
 }
 
 #middle > section {
   float: left;
   width: 50%;
   padding: 10px;
+  text-align: center;
 }
 
-#middle > section > section > * {
-  text-align: center;
+h3 {
+  font-size: .8rem;
+  color: #161f2a;
+  margin-bottom: 16px;
+}
+
+#middle p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#middle a {
+  color: #161f2a;
+  font-size: .6rem;
+  font-weight: bold;
+  border: 1px solid gray;
+  padding: 8px 36px;
 }
 
 #volunteer {
   clear: both;
   height: 300px;
+  text-align: center;
+  padding: 60px 140px;
 }
 
 footer {
