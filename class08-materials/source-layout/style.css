@@ -3,3 +3,46 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #304659;
+}
+
+header > * {
+  float: left;
+}
+
+header nav {
+  width: 40%;
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #f5f9fc;
+  height: 70px;
+  padding: 20px;
+  border-bottom: 1px solid rgb(190, 189, 189);
+}
+
+p {
+  color: #849aac;
+}
+
+main {
+  padding: 40px 10px 30px 10px;
+}
+
+span {
+  color: #849aac;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
