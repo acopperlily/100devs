@@ -23,10 +23,10 @@ header, main {
 }
 
 header {
-  padding: 20px;
-  height: 70px;
+  padding: 12px 30px;
+  height: 60px;
   font-family: 'Open Sans', sans-serif;
-  font-size: .7rem;
+  font-size: .4rem;
   font-weight: bold;
 }
 
@@ -41,7 +41,7 @@ header > * {
 
 header > nav > ul > li {
   float: left;
-  width: 40%;
+  width: 25%;
 }
 
 #logo-container {
@@ -49,7 +49,7 @@ header > nav > ul > li {
 }
 
 img {
-  width: 12%;
+  width: 10%;
 }
 
 #donate-container {
@@ -59,70 +59,70 @@ img {
 #donate-btn {
   color: #66768a;
   background: #f1f1f1;
-  padding: 6px 10px;
-  border-radius: 5px;
+  padding: 6px;
+  border-radius: 3px;
 }
 
 main {
   clear: both;
-  height: 300px;
+  height: 240px;
   text-align: center;
-  padding: 40px;
+  padding: 20px 40px;
 }
 
 h1 {
   font-weight: normal;
-  font-size: 2.6rem;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
 }
 
 main p {
-  font-size: .8rem;
-  padding: 0 12px;
-  line-height: 1.3rem;
-  margin-bottom: 10px;
+  font-size: .7rem;
+  padding: 0 17px;
+  line-height: 1.1rem;
+  margin-bottom: 20px;
 }
 
 main a {
   font-family: 'Open Sans', sans-serif;
-  font-size: .9rem;
-  
+  font-size: .7rem;
+  color: #d2d7db;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 main span {
   font-family: 'Open Sans', sans-serif;
-  font-size: .6rem;
+  font-size: .4rem;
   font-style: italic;
   font-weight: bold;
-  color: #161f2a;
+  color: #434857;
 }
 
 #why {
-  height: 280px;
+  height: 220px;
   text-align: center;
-  padding: 80px 170px;
+  padding: 60px 160px;
 }
 
 #why p {
   font-family: 'Open Sans', sans-serif;
-  font-size: .7rem;
+  font-size: .6rem;
   font-weight: bold;
-  line-height: 1.1rem;
+  color: #4f555e;
 }
 
 .divblock {
   background: #66768a;
-  width: 200px;
+  width: 180px;
   height: 100px;
   margin: 0 auto 20px auto;
 }
 
 #middle {
   background: #dbdfe2;
-  height: 400px;
-  padding: 50px;
+  height: 380px;
+  padding: 60px;
 }
 
 #middle > section {
@@ -132,17 +132,24 @@ main span {
   text-align: center;
 }
 
+h2 {
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
 h3 {
-  font-size: .8rem;
+  font-size: .7rem;
   color: #161f2a;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 #middle p {
   font-family: 'Open Sans', sans-serif;
-  font-size: .6rem;
+  font-size: .5rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  color: #4f555e;
+  margin-bottom: 24px;
 }
 
 #middle a {
@@ -155,16 +162,97 @@ h3 {
 
 #volunteer {
   clear: both;
-  height: 300px;
+  height: 270px;
   text-align: center;
   padding: 60px 140px;
+}
+
+#volunteer p {
+  color: #4f555e;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .6rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  padding: 0 20px;
+}
+
+#volunteer a {
+  color: #4f555e;
+  font-size: .5rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 1px solid #8792a2;
 }
 
 footer {
   background: #161f2a;
   color: #f1f1f1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .5rem;
+  font-weight: bold;
+  padding: 16px 24px;
+  height: 140px;
+}
+
+footer > section {
+  float: left;
+  width: 80%;
+  margin-bottom: 4px;
+}
+
+footer > section + section {
+  width: 20%;
+}
+
+footer > section > ul > li {
+  float: left;
+  padding: 0 20px 10px 0;
+}
+
+footer > section > h6 {
+  clear: both;
+}
+
+footer > section > span {
+  display: block;
 }
 
 h6 {
-  color: #f1f1f1;
+  color: #66768a;
+  font-size: .5rem;
+  font-weight: bold;
+}
+
+#mma {
+  padding-bottom: 6px;
+}
+
+.info {
+  font-weight: 400;
+}
+
+#bottom {
+  clear: both;
+  border-top: 1px solid #d2d7db;
+}
+
+#bottom > * {
+  float: left;
+}
+
+#bottom p {
+  width: 80%;
+  padding-top: 8px;
+  font-size: .5rem;
+  font-weight: normal;
+}
+
+#icon-container {
+  float: right;
+  text-align: right;
+  padding-top: 5px;
+}
+
+#icon-container img {
+  width: 17%;
 }
