@@ -267,4 +267,72 @@ h2 {
 
 #hours {
   clear: both;
+  background-image: url('assets/book-tables-background.jpg');
+  padding: 40px 40px 20px 40px;
+  text-align: center;
+}
+
+#info li {
+  padding: 2px;
+}
+
+#info li:first-child {
+  margin: 12px 0 8px 0;
+}
+
+#info li:nth-child(2) {
+  font-size: .6rem;
+}
+
+#info i {
+  color: #ff8800;
+  border: 1px solid #ffaa4d;
+  display: inline;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: .8rem;
+}
+
+#info .num {
+  color: #ff8800;
+  font-size: .9rem;
+}
+
+#open {
+  width: 65%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px 0 30px 0;
+}
+
+#first, #last {
+  float: left;
+  width: 50%;
+}
+
+#first > *, #last > * {
+  display: block;
+  padding: 0 0 7px 20px;
+}
+
+#last > * {
+  padding-left: 55px;
+}
+
+.days {
+  font-size: .6rem;
+}
+
+#open .num {
+  font-size: .8rem;
+}
+
+#img-div {
+  clear: both;
+  width: 65%;
+  margin: 30px auto;
+}
+
+#hours img {
+  width: 100%;
 }
