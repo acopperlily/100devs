@@ -164,7 +164,7 @@ h2 {
 #order {
   background-color: #f2f6f7;
   text-align: center;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 #order a {
@@ -173,54 +173,98 @@ h2 {
   font-weight: bold;
 }
 
-#order ul {
+#order #menu {
   width: 50%;
   margin: 0 auto;
 }
 
-#order li {
+#order #menu li {
   float: left;
   width: 20%;
   padding: 0 6px 6px 6px;
   border-bottom: 1px solid #d0d3d3;
 }
 
-#order li:first-child {
+#order #menu li:first-child {
   border-bottom: 1px solid #ff8800;
 }
 
-#order li:first-child a {
+#order #menu li:first-child a {
   color: #ff8800;
 }
 
-#top {
+#top, #bottom {
   clear: both;
-  padding: 30px 0;
+  padding: 30px 0 30px 50px;
+  /* margin: 0 auto; */
 }
 
-#top > * {
+#top > *, #bottom > * {
   float: left;
   width: 20%;
   margin: 0 10px;
 }
 
 #bg {
-  background-image: url('assets/contadina.jpg');
+  clear: both;
+  background: rgba(0, 0, 0, 0.3) url('assets/contadina.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 146px;
+  background-blend-mode: darken;
+  height: 150px;
   text-align: center;
+  padding: 30px 20px 0 20px;
+}
+
+#bg ul {
+  text-align: center;
+}
+
+#bg li {
+  color: #fffcfc;
+  padding-bottom: 10px;
 }
 
 .num {
   font-family: 'Yeseva One', cursive;
+  font-size: 1.1rem;
 }
 
-#bg * {
-  display: block;
-  color: white;
+#item {
+  font-size: 1.1rem;
 }
 
-#bottom {
+#bg a {
+  background-color: #ff8800;
+  color: #fffcfc;
+  font-size: .5rem;
+  /* margin-top: 10px; */
+  padding: 6px 10px;
+}
+
+.dots {
+  clear: both;
+  width: 17%;
+  margin: 0 auto;
+  padding: 16px 16px 20px 16px;
+}
+
+.dot {
+  float: left;
+  background-color: #ffdbb2;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 10px 4px;
+}
+
+.dot:nth-child(3) {
+  background-color: #ffaa4d;
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+}
+
+#hours {
   clear: both;
 }
