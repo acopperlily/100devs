@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Salon</title>
 </head>
@@ -31,7 +34,7 @@
       <div id="title">
         <h1>BLONDE & HIGHLIGHT</h1>
         <p>DIVIDE YOUR UNIQUENESS BY YOUR HAIRS IN TYLE</p>
-        <button>- OUR SERVICES</button>
+        <button class="dark">- OUR SERVICES</button>
       </div>
 
       <div id="open">
@@ -40,7 +43,7 @@
     </section>
 
     <section id="bottom">
-      <div id="coupon">
+      <div id="coupon" class="dark">
         <p>YOUR FIRST VISIT?</p>
         <p><span>-20%</span> FOR THE FIRST CLASSIC HAIR COLORING</p>
         <button>- BOOK ONLINE</button>
@@ -73,10 +76,10 @@
   </section>
 
   <section id="momentum">
-    <section>
+    <section id="left">
       <h2>MAKE YOUR OWN MOMENTUM</h2>
       <p>Hair Salon volutipat ut nisi in hendrerit. Vestibulum ante ipsum isul primis in faucibus arci luctus et ultrices posuere culilia Curoemil Etiam porttitor, lacus in lactus molestie, libero justo ullamcorper nulla, sed lacinia erat metus eget diam. Morbi volutpat loctus sit amet diam vestibioas beauty products.</p>
-      <button>- READ MORE</button>
+      <button class="dark">- READ MORE</button>
     </section>
 
     <section id="videoBG">
@@ -87,7 +90,7 @@
   <section id="stylists">
     <section id="alita">
       <div class="photo"><img src="assets/Styler-01.jpg" alt=""></div>
-      <div class="plate">
+      <div class="plate dark">
         <h4>ALITA WILLIMS</h4>
         <span>- COLOURIST</span>
       </div>
@@ -95,7 +98,7 @@
 
     <section id="ayesha">
       <div class="photo"><img src="assets/Styler-02.jpg" alt=""></div>
-      <div class="plate">
+      <div class="plate dark">
         <h4>AYESHA LAKE</h4>
         <span>- STYLER</span>
       </div>
@@ -103,7 +106,7 @@
 
     <section id="smith">
       <div class="photo"><img src="assets/Styler-03.jpg" alt=""></div>
-      <div class="plate">
+      <div class="plate dark">
         <h4>SMITH MICHELE</h4>
         <span>- BEAUTICIAN</span>
       </div>
@@ -111,20 +114,27 @@
   </section>
 
   <section id="offer">
-    <h3>COLOUR DAY OFFER!</h3>
-    <p><span>-10%</span> ON HAIRCUT COLOR AND HIGHLIGHT</p>
-    <button>- BOOK APPOINTMENT</button>
+    <div id="promo">
+      <h3>COLOUR DAY OFFER!</h3>
+      <p><span>-10%</span> ON HAIRCUT</p>
+      <p>COLOR AND HIGHLIGHT</p>
+      <button class="dark">- BOOK APPOINTMENT</button>
+    </div>
   </section>
 
   <section id="lookbook">
     <h2>OUR LOOKBOOK</h2>
     <section id="grid">
-      <div id="grid1"><img src="assets/Gallery-01.jpg" alt=""></div>
-      <div id="grid2"><img src="assets/Masonry-01.jpg" alt=""></div>
-      <div id="grid3"><img src="assets/Gallery-02.jpg" alt=""></div>
-      <div id="grid4"><img src="assets/Masonry-03.jpg" alt=""></div>
-      <div id="grid5">+</div>
-      <div id="grid6"><img src="assets/Masonry-02.jpg" alt=""></div>
+      <div id="grid-top">
+        <div id="grid1"><img src="assets/Gallery-01.jpg" alt=""></div>
+        <div id="grid2"><img src="assets/Masonry-01.jpg" alt=""></div>
+        <div id="grid3"><img src="assets/Gallery-02.jpg" alt=""></div>
+      </div>
+      <div id="grid-bottom">
+        <div id="grid4" class="float"><img src="assets/Masonry-03.jpg" alt=""></div>
+        <div id="grid5">+</div>
+        <div id="grid6" class="float"><img src="assets/Masonry-02.jpg" alt=""></div>
+      </div>
     </section>
   </section>
 </body>
