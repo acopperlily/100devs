@@ -11,13 +11,30 @@ section {
 }
 
 header {
-  height: 60px;
-  /* width: 100%; */
+  height: 40px;
+  padding: 10px;
   background-color: #fff;
-  color: #515151;
+  color: #323232;
+  font-size: .7rem;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#burger {
+  font-size: 1.5rem;
+  padding-right: 70px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo img {
+  width: 80%;
 }
 
 nav {
@@ -29,33 +46,34 @@ a {
 }
 
 header a {
-  color: #515151;
+  color: #323232;
 }
 
 main {
   background-image: url('assets/hero-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: top; */
+  background-position: top;
   color: #fff;
-  padding: 40px 10px 10px 16px;
-}
-
-#top {
-  width: 60%;
+  padding: 5% 2% 20px 5%;
 }
 
 h1 {
-  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 3rem;
 }
 
 #title p {
-  padding-bottom: 20px;
+  padding-bottom: 14px;
+  font-size: .5rem;
+  font-weight: 400;
+  letter-spacing: .3ch;
 }
 
 button {
-  padding: 10px;
-  font-size: .7rem;
+  padding: 8px 14px;
+  font-size: .5rem;
+  font-weight: 700;
 }
 
 .dark {
@@ -63,14 +81,51 @@ button {
   color: #fff;
 }
 
+#open {
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .1ch;
+  padding: 20px 0;
+}
+
 /* button.dark {
   font-size: .5rem;
 } */
 
 #coupon {
-  width: 40%;
-  height: 200px;
+  width: 190px;
+  /* height: 200px; */
   padding: 20px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: .6rem;
+  font-weight: normal;
+  margin-left: -20px;
+  padding: 16px 20px;
+  border-left: 3px solid #fff;
+  
+}
+
+#coupon span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#coupon p {
+  font-size: .7rem;
+  line-height: 1.7rem;
+  padding-bottom: 16px;
+}
+
+#bottom i {
+  color: #323232;
+  font-size: .4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #323232;
+  padding: 9px;
 }
 
 #about {
@@ -184,17 +239,53 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
+  header {
+    font-size: .5rem;
+    padding: 10px 40px;
+  }
   #burger {
     display: none;
   }
 
+  #logo img {
+    width: 45%;
+  }
+
   nav {
     display: block;
+    width: 60%;
   }
 
   ul {
-    display: flex;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    background-position: bottom;
+  }
+
+  #top, #bottom {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  #open {
+    align-self: flex-end;
+    justify-self: center;
+  }
+
+  #arrows {
+    align-self: flex-end;
+    /* padding-top: 20%; */
+    padding-right: 2%;
+  }
+
+  #open p {
+    writing-mode: vertical-lr;
   }
 
   #about {
