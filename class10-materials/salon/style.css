@@ -177,9 +177,14 @@ h2 {
 #videoBG {
   background-image: url('assets/Home3-Video.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#video {
+  height: 100%;
 }
 
 #stylists {
@@ -251,6 +256,8 @@ h2 {
   background-size: cover;
   background-blend-mode: darken;
   margin: 1% 0 .5% 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
   font-size: 5rem;
   color: #d3d1d2;
   display: flex;
@@ -312,11 +319,11 @@ h2 {
     width: 60%;
   }
 
-  #momentum {
+  /* #momentum {
     padding: 40px 80px;
     display: flex;
     gap: 40px;
-  }
+  } */
 
   #left, #videoBG {
     flex-basis: 50%;
@@ -331,5 +338,11 @@ h2 {
   #about {
     flex-direction: row;
     gap: 50px;
+  }
+
+  #momentum {
+    padding: 40px 80px;
+    display: flex;
+    gap: 40px;
   }
 }
