@@ -129,15 +129,35 @@ h5 {
 }
 
 #about {
+  padding: 50px 5%;
   text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
   gap: 40px;
 }
 
 #about > section {
-  width: 60%;
+  width: 90%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#about p {
+  font-family: 'Poppins', sans-serif;
+  font-size: .7rem;
+  padding-bottom: 10rem;
+}
+
+#about img {
+  width: 20%;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 #momentum {
@@ -288,8 +308,8 @@ h2 {
     writing-mode: vertical-lr;
   }
 
-  #about {
-    flex-wrap: nowrap;
+  #about > section {
+    width: 60%;
   }
 
   #momentum {
@@ -304,5 +324,12 @@ h2 {
 
   #stylists {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #about {
+    flex-direction: row;
+    gap: 50px;
   }
 }
