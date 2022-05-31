@@ -3,16 +3,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px dotted slateblue; */
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -24,7 +25,7 @@
 /*******************************************/
 
 body {
-
+  font-family: 'Helvetica', sans-serif;
 }
 
 
@@ -32,28 +33,48 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-  height: 55px;
+  height: 5vh;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: .4rem;
+}
+
+header a {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: .1ch;
+}
+
+#sign-in i {
+  font-size: 1.1rem;
+  padding-right: 4px;
 }
 
 header > * {
   float: left;
-  padding: 10px;
+  width: 30%;
+}
+
+#logo > div{
+  float: left;
+  background-color: #fff;
+  color: #000;
+  margin-right: 4px;
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 24px;
+  height: 23px;
+  padding-left: 3px;
+}
+
+#logo {
+  width: 40%;
 }
 
 nav {
-  width: 60%;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  float: left;
-  padding: 0 10px;
+  display: none;
 }
 
 a {
@@ -61,37 +82,287 @@ a {
   color: white;
 }
 
+input {
+  border: none;
+  padding: 3px 0 4px 7px;
+  width: 90%;
+}
+
+::placeholder {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #3f3f3f;
+}
+
+form i {
+  margin-left: -28px;
+  color: black;
+}
+
+#welcome {
+  clear: both;
+  text-align: center;
+  padding: 1% 2%;
+}
+
+h1 {
+  margin-bottom: 2px;
+  color: #4a4a4a;
+}
+
+#welcome h3 {
+  color: #969696;
+  font-weight: 400;
+}
+
+main {
+  color: #fafafa;
+  padding: 1% 2%;
+}
+
+#bottom {
+  padding: 1% 2%;
+  margin-top: 40px;
+}
+
+span {
+  color: #9e9e9e;
+}
+
+span::before {
+  content: "I";
+  font-weight: 900;
+  color: #e91801;
+  padding-right: 8px;
+}
+
+#world-leaders {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, .7)), url('../assets/worldLeaders.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.container {
+  position: absolute;
+  padding: 0 18px 0 18px;
+  bottom: 12px;
+}
+
+#world-leaders .container {
+  padding: 0 20px 0 20px;
+  bottom: 18px;
+}
+
+#world-leaders h2 {
+  font-weight: 200;
+  font-size: 2rem;
+  padding-bottom: 8px;
+}
+
+#world-leaders p {
+  color: #9e9e9e;
+  line-height: 1.4rem;
+  padding-bottom: 10px;
+}
+
 main > section {
-  float: left;
-  width: 50%;
-  margin: 20px 0;
-  padding: 0 20px;
+  margin: 0 0 20px 0;
+  height: 50vh;
+}
+
+main h3 {
+  font-weight: 400;
+  padding-bottom: 14px;
 }
 
 main > section + section > section {
+  position: relative;
   float: left;
-  width: 50%;
+  width: 48%;
+  height: 24vh;
   padding: 10px 20px 10px 0;
+  margin: 1%;
 }
 
 main > section + section > section > * {
   padding-bottom: 10px;
 }
 
-main + section {
-  padding: 10px;
+#bottom > h3 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
 }
 
-main + section > section {
-  float: left;
-  width: 33%;
-  padding: 10px 0;
+#bottom > h3::before {
+  content: "I";
+  font-weight: 900;
+  color: #e91801;
+  padding-right: 8px;
 }
 
-main + section > section > * {
-  padding-bottom: 10px;
+#bottom > section {
+  margin: 0 auto 80px auto;
+  width: 90%;
+}
+
+#bottom img {
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+#bottom > section > h3 {
+  font-size: 1.4rem;
+  padding-bottom: 8px;
+}
+
+#bottom p {
+  padding-bottom: 16px;
+}
+
+#canada {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url('../assets/flags.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#canada span::before {
+  color: #4291c3;
+}
+
+#health {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url('../assets/vaccines.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#worklife {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url('../assets/womanHeadphones.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#worklife span::before {
+  color: #4897c7;
+}
+
+#culture {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url('../assets/dudeGuitar.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#culture span::before {
+  color: #322a5c;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (min-width: 910px) {
+  header {
+    /* height: 8vh; */
+    padding: 0;
+  }
+
+  header a {
+    font-size: .7rem;
+  }
+  header > * {
+    float: left;
+  }
+
+  #logo {
+    padding: 8px 0 0 20px;
+    width: 12%;
+  }
+
+  #sign-in {
+    width: 11%;
+    padding: 8px 10px 11px 10px;
+    border-left: 1px solid #969696;
+
+  }
+
+  nav {
+    display: block;
+    width: 60%;
+  }
+
+  ul {
+    list-style: none;
+    border-right: 1px solid #969696;
+  }
+
+  li {
+    float: left;
+    padding: 8px 10px 12px 10px;
+    border-left: 1px solid #969696;
+  }
+
+  #dropdown {
+    border-right: 1px solid #969696;
+  }
+
+  #dropdown i {
+    padding-left: 10px;
+  }
+
+  form {
+    width: 14%;
+    padding: 6px;
+  }
+
+  ::placeholder {
+    font-size: .7rem;
+  }
+
+  h1 {
+    margin: 6px 0 0 0;
+    float: left;
+    font-size: 1.5rem;
+  }
+
+  #welcome h3 {
+    float: right;
+    color: #969696;
+    margin-top: 10px;
+  }
+
+  main {
+    clear: both;
+    color: #fff;
+  }
+
+  main > section {
+    float: left;
+    width: 48%;
+  }
+
+  main > section + section > section {
+    float: left;
+    height: 24vh;
+    margin: 0 0 3% 2%;
+  }
+
+  #bottom {
+    clear: both;
+    margin: 0;
+  }
+
+  #bottom > section {
+    float: left;
+    width: 31%;
+    padding: 10px 0;
+    margin: 0 2% 0 0;
+
+  }
+
+  #bottom > h3 {
+    text-align: left;
+  }
+}
