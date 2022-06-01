@@ -6,7 +6,11 @@
 	<meta name="keywords" content="one, two, three">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Blank Template</title>
+	<title>Khan Academy</title>
+	<script src="https://kit.fontawesome.com/764e3f9541.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&family=Jost:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -16,59 +20,47 @@
 	<header>
 		<nav id="left">
 			<ul>
-				<li>
-					<select name="courses" id="courses">
-						<option value="courses">Courses</option>
-					</select>
+				<li id="first"><a href="#">Courses </a>
+					<i class="fas fa-caret-down"></i>
 				</li>
 				<li>
-					<input type="text" placeholder="Search">
+					<form action=""><input type="text" placeholder="Search"></form>
 				</li>
+				<li id="search"><i class="fas fa-search"></i></li>
 			</ul>
 		</nav>
 
 		<div id="logo">
-			<img src="#" alt="logo">
-			<h2>Khan Academy</h2>
+			<div id="logo-container">
+				<img src="khan-academy-seeklogo.com.svg" alt="logo">
+				<h2>Khan Academy</h2>
+			</div>
 		</div>
 
 		<nav id="right">
 			<ul>
-				<li>
-					<a href="#">Donate</a>
-				</li>
-				<li>
-					<a href="#">Login</a>
-				</li>
-				<li>
-					<a href="#">Sign up</a>
-				</li>
+				<li><a href="#">Donate</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Sign up</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<section>
-			<img src="./kidsLearning.png" alt="Kids learning">
+			<div id="img-container"><img src="./kidsLearning.png" alt="Kids learning"></div>
 		</section>
 		<section>
-			<h1>For every student,</h1>
-			<h1>every classroom.</h1>
-			<h1>Real results.</h1>
-			<p>We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</p>
+			<div id="container">
+				<h1>For every student, every classroom. Real results.</h1>
+				<div id="green-lines"></div>
+				<p>We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</p>
+			</div>
 			<ul>
-				<li>
-					<a href="#">Learners</a>
-				</li>
-				<li>
-					<a href="#">Teachers</a>
-				</li>
-				<li>
-					<a href="#">Districts</a>
-				</li>
-				<li>
-					<a href="#">Parents</a>
-				</li>
+				<li><a href="#">Learners</a></li>
+				<li><a href="#">Teachers</a></li>
+				<li><a href="#">Districts</a></li>
+				<li><a href="#">Parents</a></li>
 			</ul>
 		</section>
 	</main>
