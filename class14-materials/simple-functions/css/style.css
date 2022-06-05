@@ -3,7 +3,9 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -16,3 +18,26 @@
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  background: #000;
+  color: mediumvioletred;
+  text-align: center;
+}
+
+h1 {
+  color: orange;
+  font-size: 3rem;
+}
+
+h2 {
+  padding: 10px;
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+span {
+  color: green;
+  font-size: 2rem;
+}
