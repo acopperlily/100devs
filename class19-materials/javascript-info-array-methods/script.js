@@ -150,3 +150,64 @@ function sortByAge(arr) {
 }
 
 console.log(sortByAge(users));
+
+/* Write the function shuffle(array) that shuffles
+elements of the array. All element orders should have
+an equal probability. */
+
+function shuffle(arr) {
+  let result = [];
+  while (arr.length > 0) {
+    let order = Math.floor(Math.random() * arr.length);
+    result.push(arr[order]);
+    arr.splice(order, 1);
+  }
+  return result;
+}
+
+let arr3 = [1, 2, 3];
+console.log(shuffle(arr3));
+
+/* Write the function getAverageAge(users) that gets an
+array of objects with property age and returns the
+average age. Formula for average age is:
+(age1 + age2 + ... + ageN) / N. */
+
+function getAverageAge(users) {
+  let ages = users.reduce((acc, cur) => acc + cur.age, 0);
+  return Math.round(ages / users.length);
+}
+
+console.log(getAverageAge(users));
+
+/* Let arr be an array. Create a function unique(arr)
+that should return an array with unique items of
+arr. */
+
+const unique = arr => Array.from(new Set(arr));
+
+let strings = ['Hare', 'Krishna', 'Hare', 'Krishna', 'Krishna', 'Krishna', 'Hare', 'Hare', ':-O'];
+
+console.log(unique(strings));
+
+/* Let's say we received an array of users in the form
+{id:..., name:..., age:... }. Create a function
+groupById(arr) that creates an object from it, with id as
+the key and array items as values. */
+
+// NOTE: Dude says to use the reduce method, but that seems super dumb to me, so nah. Fight me.
+
+function groupById(arr) {
+  let result = {};
+  arr.forEach(el => result[el.id] = el);
+  return result;
+}
+
+let users1 = [
+  {id: 'john', name: 'John Smith', age: 20},
+  {id: 'ann', name: 'Ann Smith', age: 24},
+  {id: 'pete', name: 'Pete Peterson', age: 31}
+];
+
+let usersById = groupById(users1);
+console.log(usersById);
