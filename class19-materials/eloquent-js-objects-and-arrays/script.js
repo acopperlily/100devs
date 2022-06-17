@@ -91,6 +91,66 @@ function listToArray(list) {
   return arr;
 }
 
+function prepend(el, list) {
+  list = {
+    value: el,
+    rest: list
+  };
+  return list;
+}
+
+function nth(list, pos) {
+  for (let i = 0; i < pos; i++) {
+    list = list.rest;
+    if (list == null) return undefined;
+  }
+  return list.value;
+}
+
+function nthRecursive(list, pos) {
+  if (list == null) return undefined;
+  if (pos == 0) return list.value;
+  return nthRecursive(list.rest, pos - 1);
+}
+
+console.log(arrayToList([1, 2, 3]));
 let test = arrayToList([10, 20]);
 console.log(test);
 console.log(listToArray(arrayToList([10, 20, 30])));
+
+console.log(prepend(5, test));
+console.log(nth(test, 1));
+console.log(nthRecursive(arrayToList([2, 8, 4, 3]), 0));
+console.log(test, '\n');
+
+/* Write a function deepEqual that takes two values and returns
+true only if they are the same value or are objects with the
+same properties, where the values of the properties are equal
+when compared with a recursive call to deepEqual. */
+
+function isObject(obj) {
+  return typeof obj == 'object' && typeof obj != null;
+}
+
+function deepEqual(val1, val2) {
+  
+  if (isObject(val1) && isObject(val2)) {
+    let arr1 = Object.keys(val1);
+    let arr2 = Object.keys(val2);
+    console.log('length:', arr1.length === arr2.length);
+    console.log(Object.keys(val1).length === Object.keys(val2).length);
+    for (let i = 0; i < arr1.length; i++) {
+      console.log(arr2.includes(i));
+    }
+
+    // console.log(arr1 == arr2);
+  } else if (val1 !== val2) return false;
+  return;
+}
+
+let obj = {here: {is: 'an'}, object: 2};
+let obj2 = {here: 1, object: 2};
+console.log(deepEqual(obj, {here: {is: 'an'}, object: 2}));
+console.log(deepEqual(obj, obj2));
+console.log(deepEqual({here: {is: 'an'}, object: 2}, obj));
+console.log(deepEqual(obj, {no: 1, yes: 12, maybe: 300}));
