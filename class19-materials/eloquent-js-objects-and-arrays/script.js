@@ -134,23 +134,41 @@ function isObject(obj) {
 
 function deepEqual(val1, val2) {
   
+  // Check for objects
   if (isObject(val1) && isObject(val2)) {
     let arr1 = Object.keys(val1);
     let arr2 = Object.keys(val2);
     console.log('length:', arr1.length === arr2.length);
-    console.log(Object.keys(val1).length === Object.keys(val2).length);
+
+    // Check for equal length
+    // if (Object.keys(val1).length !== Object.keys(val2).length) return false;
+
     for (let i = 0; i < arr1.length; i++) {
-      console.log(arr2.includes(i));
+      console.log('loop:', arr2.includes(arr1[i]) && arr1.includes(arr2[i]));
+
+      // Check for equal keys
+      // if (!arr2.includes(arr1[i]) || !arr1.includes(arr2[i])) return false;
     }
+
+    Object.keys(val1).forEach((k) => {
+      console.log('keys:', Object.keys(val2).includes(k));
+    });
+
+    Object.values(val1).forEach(v => {
+      console.log('values:', Object.values(val2).includes(v));
+      console.log('value:', v);
+    });
+
 
     // console.log(arr1 == arr2);
   } else if (val1 !== val2) return false;
-  return;
+  return '';
 }
 
 let obj = {here: {is: 'an'}, object: 2};
 let obj2 = {here: 1, object: 2};
-console.log(deepEqual(obj, {here: {is: 'an'}, object: 2}));
+console.log(deepEqual(obj, {here: {is: 'an'}, object: 2}), '\n');
 console.log(deepEqual(obj, obj2));
-console.log(deepEqual({here: {is: 'an'}, object: 2}, obj));
-console.log(deepEqual(obj, {no: 1, yes: 12, maybe: 300}));
+console.log(deepEqual({here: {is: 'an'}, object: 2}, obj), '\n');
+console.log(deepEqual(obj, {no: 1, yes: 12, maybe: 300}), '\n');
+console.log(deepEqual({one: 1, two: 2}, {one: 1, two: 2}), '\n');
