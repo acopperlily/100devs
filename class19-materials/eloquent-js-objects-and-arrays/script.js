@@ -128,6 +128,9 @@ true only if they are the same value or are objects with the
 same properties, where the values of the properties are equal
 when compared with a recursive call to deepEqual. */
 
+/* Yeah, I haven't figured this one out yet, so I'm gonna
+put it down for a while and revisit later. */
+
 function isObject(obj) {
   return typeof obj == 'object' && typeof obj != null;
 }
