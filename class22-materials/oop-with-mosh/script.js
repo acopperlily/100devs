@@ -50,10 +50,39 @@ const circle = createCircle(1);
 function Circle(radius) {
   // console.log(this);
   this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
+
+  let defaultLocation = { x: 0, y: 0 };
+
+  // let computeOptimumLocation = function(factor) {
+
+  //}
+  this.getDefaultLocation = function() {
+    return defaultLocation;
   }
+
+  this.draw = function() {
+    // computeOptimumLocation(0.1);
+    
+    console.log('draw');
+  };
+
+  Object.defineProperty(this, 'defaultLocation', {
+    get: function() {
+      return defaultLocation;
+    },
+    set: function(value) {
+      if (!value.x || !value.y) {
+        throw new Error('Invalid location.');
+      }
+      defaultLocation = value;
+    }
+  });
 }
+
+const circle3 = new Circle(10);
+// circle.computeOptimumLocation(); // nope
+// circle3.defaultLocation = 1; // throws error
+circle3.draw();
 
 // const Circle1 = new Function('radius', `
 //   this.radius = radius;
@@ -100,13 +129,69 @@ console.log(obj); // points to same obj
 
 const circle2 = new Circle(10)
 
-circle.location = { x: 1};
+circle2.location = { x: 1};
 // Bracket notation:
 const propertyName = 'center-location';
-circle[propertyName] = { x: 1 }; // use for special chars
+// circle2[propertyName] = { x: 1 }; // use for special chars
 
-delete circle.location;
+delete circle2.location;
 
-for (let key in circle) {
-  console.log(key, circle[key]);
+for (let key in circle2) {
+  console.log(key, circle2[key]);
 }
+
+console.log(Object.keys(circle2));
+if ('radius' in circle2) {
+  console.log('Circle has a radius.');
+}
+
+function Stopwatch() {
+  let startTime, endTime, running, duration = 0;
+
+  this.start = function() {
+    if (running) {
+      throw new Error('Stopwatch has already started.');
+    }
+
+    running = true;
+    startTime = new Date();
+  };
+
+  this.stop = function() {
+    if (!running) {
+      throw new Error('Stopwatch is not started.');
+    }
+
+    running = false;
+    endTime = new Date();
+
+    const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
+    duration += seconds;
+  };
+
+  this.reset = function() {
+    startTime = null;
+    endTime = null;
+    running = false;
+    duration = 0;
+  };
+
+  Object.defineProperty(this, 'duration', {
+    get: function() {
+      return duration;
+    }
+  });
+}
+
+const sw = new Stopwatch(); 
+sw.start();
+// sw.start(); // throw error
+let count = 2000000000; // lol i had to shrink this number in codepen lololol
+while (count) {
+  count--;
+}
+sw.stop();
+// sw.stop(); // throw error
+console.log(sw.duration);
+sw.reset();
+console.log(sw.duration);
