@@ -14,7 +14,13 @@ function makeFetchHappen(e) {
       console.log(num);
       const grid = document.getElementById('grid');
       clearGrid(grid);
-      drawGrid(num, grid);
+      document.querySelector('h2').textContent = "Here's a fun fact:"
+      if (num < 1000) {
+        drawGrid(num, grid);
+        changeHeading('Here is a grid where each block represents one unit of your number');
+      } else {
+        changeHeading('Number is too large to draw grid!');
+      }
     })
     .catch(err => {
       console.log(`error: ${err}`);
@@ -38,9 +44,14 @@ function drawGrid(num, grid) {
     row.classList.add('row');
     for (let j = 0; j < square; j++) {
       const div = document.createElement('div');
-      div.textContent = '.';
+      // div.textContent = '.';
       row.appendChild(div);
     }
     grid.appendChild(row);
   }
+}
+
+function changeHeading(text) {
+  const heading = document.getElementById('grid-title');
+  heading.textContent = text;
 }
