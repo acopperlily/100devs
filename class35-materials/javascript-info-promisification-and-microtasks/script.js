@@ -1,3 +1,5 @@
+// Promisification
+
 function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
@@ -35,4 +37,26 @@ function promisify(f, manyArgs = false) {
   };
 }
 
-f = promisify(f, true);
+// f = promisify(f, true);
+
+// Microtasks
+
+let promise = Promise.resolve();
+
+promise.then(() => console.log('promise done!'));
+
+console.log('code finished');
+
+Promise.resolve()
+  .then(() => console.log('second promise done!'))
+  .then(() => console.log('second code finished'));
+
+let promise1 = Promise.reject(new Error('Promise Failed!'));
+promise1.catch(err => console.log('caught'));
+
+window.addEventListener('unhandledrejection', event => console.log(event.reason)); // doesn't run the above, but runs the below
+
+let promise2 = Promise.reject(new Error('Another promise fail!'));
+
+let promise3 = Promise.reject(new Error('Yet another fail!'));
+setTimeout(() => promise3.catch(err => console.log('gotcha')), 1000);
